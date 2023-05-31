@@ -1,0 +1,39 @@
+﻿<Window x:Class="балтика_5ка.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:балтика_5ка"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="nazv">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="del" Grid.Column="1" Content="удалить" Margin="64,17,63,17" Grid.Row="7" Click="del_Click"/>
+        <Button x:Name="izm" Grid.Column="1" Content="изменить" Margin="64,17,63,17" Grid.Row="6" Click="izm_Click"/>
+        <Button x:Name="dab" Grid.Column="1" Content="добавить" Margin="64,17,63,18" Grid.Row="5" Click="dab_Click"/>
+        <DatePicker x:Name="data" Margin="10,15,41,15" Grid.ColumnSpan="2" SelectedDateChanged="data_SelectedDateChanged"/>
+        <TextBox x:Name="name" Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" Text="ВВЕДИТЕ НАЗВАНИЕ " Margin="64,17,63,18" GotFocus="name_GotFocus"/>
+        <ComboBox x:Name="box" Grid.Column="1" Grid.Row="2" Margin="64,0,63,7" Height="20" VerticalAlignment="Bottom"/>
+        <Button x:Name="dobav" Grid.Column="1" Content="Добавить тип" Grid.Row="3" Margin="64,17,63,17" Click="dobav_Click"/>
+        <TextBox x:Name="money" Grid.Column="1" Grid.Row="4" TextWrapping="Wrap" Text="ЦЕНА В РУБЛЯХ" Margin="64,17,63,17" GotFocus="money_GotFocus"/>
+        <DataGrid x:Name="dg" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=3}" Margin="0,17,0,17" Grid.RowSpan="6" SelectionChanged="dg_SelectionChanged" />
+        <TextBox x:Name="chtodob" Grid.Column="1" Grid.Row="2" TextWrapping="Wrap" Text="ТИП" Margin="64,0,63,0" GotFocus="chtodob_GotFocus" Height="20" VerticalAlignment="Top"/>
+        <TextBlock x:Name="itog" Margin="185,19,299,19" Grid.Row="7" TextWrapping="Wrap" Text=""/>
+
+    </Grid>
+</Window>
